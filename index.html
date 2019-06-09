@@ -1,0 +1,124 @@
+
+<!Doctype>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+		</style>
+
+		<script type="text/javascript">
+
+			function showGame(){
+				//alert("hello");                                                                                                                                  
+				var game = document.getElmentsByClassName("game");
+				alert("again");
+				if(game.style.display == "none"){
+					game.style.disply = "block";
+					document.getElementsByClassName("game").style.display = "none";
+				}
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+		<h1 align="center" ><font color="green">Official website for Crystalis</font></h1>
+
+
+		<div class="tab">
+			<button class="tablinks" onclick="openComponent(event, 'AboutTheGame')">About The Game</button>
+			<button class="tablinks" onclick="openComponent(event, 'AboutUs')">About Us</button>
+		</div>
+
+		<div id="AboutTheGame" class="tabcontent">
+			<h3>About the Game</h3>
+			<p><a href = "https://github.com/liujiaruirz/rubber_ducks ">Link to github repository to download the game</a ></p >
+
+			<p>Thomas is a 14-year-old boy coming of age in the town of Crystalis. All children who turn 15 in Crysstalis must choose an occupation. Thomas now has 3 weeks before he turns 
+			15 and has to choose. Thomas has always wanted to be a knight ever since he was a kid. However, Merlin, the town chief, won't allow Thomas to officially become a knight. Thomas 
+			must now pass all of Merlin's trials or rist becoming the town's baker as a last resort</p >
+			<p>In order to become a knight, please follow Merlin's direction and complete all of his tasks.</p >
+			<p><font color = "red">Here is an overview of the map of game to help you explore and succeed</font></p >
+			<img src="forest.jpg" width = "500" height="300">
+
+
+		</div>
+
+		<div id="AboutUs" class="tabcontent">
+			<h3>About Us</h3>
+			<p>This game is a project for CS48 at UCSB.</p >
+			<ul>
+				<li>Qinghang Hong</li>
+				<li>Jiarui Liu</li>
+				<li>Xinyu Liu</li>
+				<li>Shan Qing</li>
+				<li>Haochen Yang</li>
+			</ul>
+			<p>CREDITS:</p >
+			<ul>
+				<li><i>Jiarui Liu</i>: Story line, map, player movement animation, quest system and dialogue system</li>
+				<li><i>Haochen Yang</i>: Player animation, login menu for front end, scene transitions, health bar animation and this website</li>
+				<li><i>Xinyu Liu</i>: Battle system, game setup and enemy</li>
+				<li><i>Shan Qing</i>: Start menu, pause menu and scene transitions</li>
+				<li><i>Qinghang Hong</i>: Backend server, store, scoreboard and this website</li>
+			</ul>
+
+		</div><script>
+		function openComponent(evt, component) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(component).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+	</script>
+
+	</body>
+
+</html>
